@@ -67,5 +67,7 @@
 
 ## 有用的工具
 
-[Day Progress Tracker](https://github.com/tiaod/day-progress)
+[Day Progress Tracker](https://github.com/tiaod/day-progress) - 有助于察觉时间的流逝
+
+[谷歌呼吸小工具](https://www.google.com/search?q=breathing+exercise&sxsrf=APq-WBsjKHnYEkpUGB3_BJ1SPv_F_8tAGg%3A1646711072741&ei=INEmYu_2LOLK0PEPn4WCuAc&oq=breathign+exc&gs_lcp=Cgdnd3Mtd2l6EAEYADIHCCMQsQIQJzIECAAQCjIECAAQCjIECAAQCjIECAAQCjIECAAQCjIECAAQCjIECAAQCjIECAAQCjIECAAQCjoECCMQJzoGCAAQChBDOgUIABCRAjoHCC4Q1AIQQzoFCC4QkQI6BAgAEEM6DgguEIAEELEDEMcBEKMCOggILhCABBCxAzoKCC4QsQMQ1AIQQzoECC4QQzoLCAAQgAQQsQMQyQM6BQgAEJIDOgcIABCxAxBDOggIABCABBCxAzoLCC4QgAQQxwEQrwE6CwgAEIAEELEDEIMBOgUIABCxAzoFCAAQgAQ6CAgAELEDEJECOgcIABCxAxAKOgcIABCABBAKSgQIQRgASgQIRhgAUABYkg5gnhhoAXABeACAAXOIAdwJkgEEMTIuMpgBAKABAcABAQ&sclient=gws-wiz) - 有助于睡觉前平复心情
 
