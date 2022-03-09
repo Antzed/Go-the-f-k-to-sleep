@@ -45,6 +45,8 @@
 
 ## 目标建立步骤
 
+[Top](#Go-the-f**k-to-sleep)
+
 1. 进入你自己的文件夹
 
 2. 遵循于于之前一样的命名逻辑
@@ -66,6 +68,8 @@
 ---
 
 ## 有用的工具
+
+[Top](#Go-the-f**k-to-sleep)
 
 [Day Progress Tracker](https://github.com/tiaod/day-progress) - 有助于察觉时间的流逝
 
