@@ -17,5 +17,15 @@ currenttime=$(date +%H:%M)
 	   printf "\n$vardate $varcurrenttime $varreason\n" >> $varusername/"${varusername,,}"$(date "+%Y").md
 
    fi
-exit 1
+ 
+   echo want to commit and push, 1 or 0?
 
+read vardecision
+
+if [ $vardecision = 1 ]
+then
+	git commit -a -m "updated sleep log"
+	git push origin master
+else
+	exit 1
+fi
