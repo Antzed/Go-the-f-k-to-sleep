@@ -35,6 +35,13 @@ bash DailyCheckUp.sh
 [在这里输入原因]
 ```
 
+然后commit
+
+```bash
+//程序会显示：want to commit and push, 1 or 0?
+[在这里输入1或0, 1代表要commit，0代表不commit]
+```
+
 #### 手动
 
 1. 加入自己的文件夹，[]不要写进去(所有后面的步骤也都不要记进去)
