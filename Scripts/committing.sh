@@ -1,11 +1,10 @@
 #!/bin/bash 
 varfilepath=UserChoice/RememberToCommit.txt
-if [ -f $varfilepath ]; then
-	if [ 'cat $varfilepath'=="1" ];  then\
+if [ -f $avrfilepath ] && [ $(cat $varfilepath)=="1" ]; then
 	git commit -a -m "updated sleep log"
  	git push origin master
-	fi
-elif [ ! -f $avrfilepath ] | [ 'cat $varfilepath'=="0" ]; then
+
+elif [ ! -f $avrfilepath ] | [ $(cat $varfilepath)=="0" ]; then
 	echo want to commit and push, 1 or 0?
 
         read vardecision
@@ -19,8 +18,16 @@ elif [ ! -f $avrfilepath ] | [ 'cat $varfilepath'=="0" ]; then
 	echo do you want the choice to be remembered, 1 or 0?
 
         read varremembered
-
+	
         if [ $varremembered = 1 ]; then
+		if [ ! -d "UserChoice/" ]; then
+			echo mkdir
+			mkdir "UserChoice/"
+		else
+			echo clear
+			echo -n "" > $varfilepath
+		fi
+
                 echo "$vardecision" > $varfilepath
 	else	
 		exit 1
