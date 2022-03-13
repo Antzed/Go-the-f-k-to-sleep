@@ -18,14 +18,4 @@ currenttime=$(date +%H:%M)
 
    fi
  
-   echo want to commit and push, 1 or 0?
-
-read vardecision
-
-if [ $vardecision = 1 ]
-then
-	git commit -a -m "updated sleep log"
-	git push origin master
-else
-	exit 1
-fi
+bash Scripts/committing.sh

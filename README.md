@@ -40,6 +40,8 @@ bash DailyCheckUp.sh
 ```bash
 //程序会显示：want to commit and push, 1 or 0?
 [在这里输入1或0, 1代表要commit，0代表不commit]
+//第一次会问你要不要记住你的选择：do you want the choice to be remembered, 1 or 0?
+[想要记住就按1，不想要记住就按0]
 ```
 
 #### 手动
