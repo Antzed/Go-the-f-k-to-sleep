@@ -19,13 +19,13 @@
 1. 如果还没有创建自己的文件夹，或者已经到了新的一年了的话:
 
 ```bash
-bash StartLogging.sh
+./gts -s
 ```
 
 2. 每天临睡前运行一下:
 
 ```bash
-bash DailyCheckUp.sh
+./gts -c
 ```
 
 然后再问题下输入自己的晚睡原因
@@ -43,6 +43,18 @@ bash DailyCheckUp.sh
 //第一次会问你要不要记住你的选择：do you want the choice to be remembered, 1 or 0?
 [想要记住就按1，不想要记住就按0]
 ```
+
+3. 如果想要重置自己的commit选项：
+
+   ```bash
+   ./gts -r
+   ```
+
+4. 如果记不住前几步的指令：
+
+   ```bash
+   ./gts -h
+   ```
 
 #### 手动
 

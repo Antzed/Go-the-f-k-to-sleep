@@ -1,6 +1,7 @@
 #!/bin/bash 
-varfilepath=UserChoice/RememberToCommit.txt
+varfilepath=./UserChoice/RememberToCommit.txt
 if [ -f $avrfilepath ] && [ $(cat $varfilepath)=="1" ]; then
+	#echo commit
 	git commit -a -m "updated sleep log"
  	git push origin master
 
@@ -10,7 +11,7 @@ elif [ ! -f $avrfilepath ] | [ $(cat $varfilepath)=="0" ]; then
         read vardecision
 
         if [ $vardecision = 1 ]; then
-	echo first commit
+	#echo first commit
 		git commit -a -m "updated sleep log"
                 git push origin master
         fi

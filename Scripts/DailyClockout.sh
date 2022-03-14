@@ -2,7 +2,6 @@
 echo What is your reason to sleep late today?
 
 read varreason
-
 varusername=$(git config user.name)
 
 varcurrenttime=$(date "+%I:%M%p")
@@ -16,6 +15,5 @@ currenttime=$(date +%H:%M)
            vardate=$(date "+%Y/%m/%d %a")
 	   printf "\n$vardate $varcurrenttime $varreason\n" >> $varusername/"${varusername,,}"$(date "+%Y").md
 
-   fi
- 
+   fi 
 bash Scripts/committing.sh
