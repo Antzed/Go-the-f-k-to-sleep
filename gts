@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 usage()
 {
   echo "Usage: [ -h: help ] 
@@ -9,9 +10,8 @@ usage()
 
   exit 2
 }
-
 	
-while getopts "hscr" opt; do
+while getopts "hsc:r" opt; do
 	case $opt in
 		h)
 			usage
@@ -20,7 +20,21 @@ while getopts "hscr" opt; do
 			bash Scripts/StartLogging.sh
 			;;
 		c)
-			bash Scripts/DailyClockout.sh
+			
+			varreason=${OPTARG}
+        		varusername=$(git config user.name)
+
+        		varcurrenttime=$(date "+%I:%M%p")
+
+        		currenttime=$(date +%H:%M)
+          		if [[ "$currenttime" > "24:00" ]] || [[ "$currenttime" < "06:00" ]];then
+                		vardate=$(date -d "yesterday" "+%Y/%m/%d %a")
+                		printf "\n$vardate 次日$varcurrenttime $varreason\n" >> $varusername/"${varusername,,}"$(date "+%Y").md
+          		else
+				vardate=$(date "+%Y/%m/%d %a")
+                		printf "\n$vardate $varcurrenttime $varreason\n" >> $varusername/"${varusername,,}"$(date "+%Y").md
+			fi
+			bash Scripts/committing.sh
 			;;
 		r)
 			bash Scripts/ResetChoice.sh
@@ -34,3 +48,4 @@ while getopts "hscr" opt; do
 
 	esac
 done
+
