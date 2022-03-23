@@ -1,6 +1,6 @@
 #!/bin/bash 
-varfilepath=./UserChoice/RememberToCommit.txt
-if [ -f $varfilepath ] && [ $(cat $varfilepath)=="1" ]; then
+varfilepath="./UserChoice/RememberToCommit.txt"
+if [ -f "$varfilepath" ] && [ $(cat $varfilepath)=="1" ]; then
 	#echo commit
 	git commit -a -m "updated sleep log"
  	git push origin master
