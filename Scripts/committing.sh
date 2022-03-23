@@ -1,11 +1,15 @@
 #!/bin/bash 
 varfilepath="./UserChoice/RememberToCommit.txt"
-if [ -f "$varfilepath" ] && [ $(cat $varfilepath)=="1" ]; then
+if [ ! -f "$varfilepath" ]; then
+	touch $varfilepath
+fi
+	
+if [ $(cat $varfilepath)=="1" ]; then
 	#echo commit
 	git commit -a -m "updated sleep log"
  	git push origin master
 
-elif [ ! -f $varfilepath ] | [ $(cat $varfilepath)=="0" ]; then
+elif [ $(cat $varfilepath)=="" ] | [ $(cat $varfilepath)=="0" ]; then
 	echo want to commit and push, 1 or 0?
 
         read vardecision
@@ -21,13 +25,9 @@ elif [ ! -f $varfilepath ] | [ $(cat $varfilepath)=="0" ]; then
         read varremembered
 	
         if [ $varremembered = 1 ]; then
-		if [ ! -d "UserChoice/" ]; then
-			echo mkdir
-			mkdir "UserChoice/"
-		else
-			echo clear
-			echo -n "" > $varfilepath
-		fi
+		
+		echo clear
+		echo -n "" > $varfilepath
 
                 echo "$vardecision" > $varfilepath
 	else	
